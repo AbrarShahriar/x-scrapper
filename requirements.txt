@@ -1,0 +1,6 @@
+twikit>=2.3.1
+flask>=2.3.0
+asyncio
+aiohttp
+python-dotenv>=1.0.0
+cachetools>=5.3.0              
