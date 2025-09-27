@@ -81,7 +81,6 @@ class TwitterClient:
                     'username': username,
                     'retweet_count': getattr(tweet, 'retweet_count', 0),
                     'favorite_count': getattr(tweet, 'favorite_count', 0),
-                    'cached': False
                 }
                 tweet_data.append(tweet_info)
             

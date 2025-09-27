@@ -21,13 +21,13 @@ def create_tweet_routes(app):
             result = twitter_client.get_user_tweets(username, count)
             
             # Add cache info to response
-            # if Config.CACHE_ENABLED:
-            #     cache_stats = tweet_cache.get_stats()
-            #     result['cache_info'] = {
-            #         'cached': result.get('cached', False),
-            #         'cache_hit_rate': cache_stats['hit_rate'],
-            #         'cache_size': cache_stats['current_size']
-            #     }
+            if Config.CACHE_ENABLED:
+                cache_stats = tweet_cache.get_stats()
+                result['cache_info'] = {
+                    'cached': result.get('cached', False),
+                    'cache_hit_rate': cache_stats['hit_rate'],
+                    'cache_size': cache_stats['current_size']
+                }
             
             return jsonify(result)
         

@@ -15,6 +15,6 @@ class Config:
     MAX_TWEETS_MULTIPLE_USERS = 20
     
     # Cache settings
-    CACHE_ENABLED = os.getenv('CACHE_ENABLED', 'False').lower() == 'false'
+    CACHE_ENABLED = os.getenv('CACHE_ENABLED', 'True').lower() == 'true'
     CACHE_TTL = int(os.getenv('CACHE_TTL', 1800))  # 30 minutes
     CACHE_MAXSIZE = int(os.getenv('CACHE_MAXSIZE', 500))
